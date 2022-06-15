@@ -1,4 +1,8 @@
 <?php
+namespace App\controllers;
+
+use App\core\Controller;
+use App\core\View;
 class Controller_Kuleba extends Controller
 {
     public function __construct()
@@ -8,9 +12,8 @@ class Controller_Kuleba extends Controller
 
     public function action_index()
     {
-        session_start();
         if (!isset($_SESSION['email'])) {
-            header('Location: application/views/login');
+            header('Location: /login');
         }
 
         $this->view->generate('kuleba_view.php', 'template_view.php');

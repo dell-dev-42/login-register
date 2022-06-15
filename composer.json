@@ -1,0 +1,15 @@
+{
+  "autoload": {
+    "psr-4": {
+      "App\\": "application"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.33"
+    }
+  },
+  "require": {
+    "pecee/simple-router": "4.3.7.2"
+  }
+}

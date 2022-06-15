@@ -1,6 +1,11 @@
 <?php
 
-include "application/models/model_user.php";
+namespace App\controllers;
+
+use App\core\Controller;
+use App\core\View;
+use App\models\Model_Weapon;
+use App\models\Model_User;
 
 class Controller_Weapon extends Controller
 {
@@ -11,18 +16,18 @@ class Controller_Weapon extends Controller
         $this->view = new View();
     }
 
-    function action_select()
-    {
-        session_start();
-        if (!isset($_SESSION['email'])) {
-            header('Location: application/views/login');
-        }
+    // function action_select()
+    // {
+    //     session_start();
+    //     if (!isset($_SESSION['email'])) {
+    //         header('Location: /login');
+    //     }
 
-        $data = [];
-        $data['weapon'] = $this->model->getData();
+    //     $data = [];
+    //     $data['weapon'] = $this->model->getData();
 
-        $this->view->generate('dashboard_view.php', 'template_view.php', $data);
-    }
+    //     $this->view->generate('dashboard_view.php', 'template_view.php', $data);
+    // }
 
     function action_save()
     {

@@ -1,5 +1,9 @@
 <?php
+namespace App\controllers;
 
+use App\core\Controller;
+use App\models\Model_User;
+use App\core\View;
 class Controller_User extends Controller
 {
     public function __construct()
@@ -12,7 +16,7 @@ class Controller_User extends Controller
     {
         session_start();
         if (!isset($_SESSION['email'])) {
-            header('Location: application/views/login');
+            header('Location: /login');
         }
 
         $this->view->generate('login_view.php', 'template_view.php');
@@ -51,7 +55,6 @@ class Controller_User extends Controller
 
     public function action_logout()
     {
-        // var_dump($_SESSION['email']);die();
         session_start();
         unset($_SESSION['email']);
         header('Location: /login');

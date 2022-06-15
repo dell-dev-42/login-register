@@ -1,7 +1,8 @@
 <?php
+namespace App\core;
 
-require_once('config.php');
-
+use PDO;
+use PDOException;
 class Model
 {
 	protected $conn = null;

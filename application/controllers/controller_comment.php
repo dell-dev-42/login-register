@@ -1,6 +1,10 @@
 <?php
+namespace App\controllers;
 
-include "application/models/model_politic.php";
+use App\core\Controller;
+use App\core\View;
+use App\models\Model_Comment;
+use App\models\Model_Politic;
 
 class Controller_Comment extends Controller
 {
@@ -13,7 +17,6 @@ class Controller_Comment extends Controller
 
     public function action_index()
     {
-        session_start();
         if (!isset($_SESSION['email'])) {
             header('Location: /login');
         }

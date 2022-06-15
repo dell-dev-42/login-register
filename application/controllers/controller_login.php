@@ -1,5 +1,8 @@
 <?php
+namespace App\controllers;
 
+use App\core\Controller;
+use App\core\View;
 class Controller_Login extends Controller
 {
     public function __construct()

@@ -1,5 +1,11 @@
 <?php
 
+namespace App\models;
+
+use App\core\Model;
+use PDO;
+use PDOException;
+
 class Model_Weapon extends Model
 {
     public function getData($countryId = 1)

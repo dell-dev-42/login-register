@@ -29,14 +29,14 @@
       <div class="col-2">
         <select class="form-control mb-2" name=" country_id">
           <?php foreach ($countries as $country) { ?>
-            <option value="<?php echo  $country['id']; ?>" <?php if ($countryId === $country['id']) { ?> selected <?php } ?>><?php echo $country['name']; ?></option>
+            <option value="<?php echo  $country['id']; ?>" <?php if (isset($countryId) && $countryId === $country['id']) { ?> selected <?php } ?>><?php echo $country['name']; ?></option>
           <?php } ?>
         </select>
       </div>
       <div class="col-2">
         <select class="form-control mb-2" name="weapon_id">
           <?php foreach ($weapons as $weapon) { ?>
-            <option value="<?php echo  $weapon['id']; ?>" <?php if ($weaponId === $weapon['id']) { ?> selected <?php } ?>><?php echo $weapon['name']; ?></option>
+            <option value="<?php echo  $weapon['id']; ?>" <?php if (isset($weaponId) && $weaponId === $weapon['id']) { ?> selected <?php } ?>><?php echo $weapon['name']; ?></option>
           <?php } ?>
         </select>
       </div>

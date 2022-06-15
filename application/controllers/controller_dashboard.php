@@ -1,8 +1,10 @@
 <?php
+namespace App\controllers;
 
-include "application/models/model_country.php";
-include "application/models/model_weapon.php";
-
+use App\core\Controller;
+use App\core\View;
+use App\models\Model_Country;
+use App\models\Model_Weapon;
 class Controller_Dashboard extends Controller
 {
     public function __construct()
@@ -15,10 +17,8 @@ class Controller_Dashboard extends Controller
 
     public function action_index()
     {
-        session_start();
-
         if (!isset($_SESSION['email'])) {
-            header('Location: application/views/login');
+            header('Location: /login');
         }
 
         $data = [];

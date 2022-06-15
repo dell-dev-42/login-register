@@ -1,10 +1,15 @@
 <?php
 
+namespace App\models;
+
+use App\core\Model;
+use PDO;
+use PDOException;
+
 class Model_Comment extends Model
 {
     public function saveNewComment($politic_id, $comment, $parent_id = 0)
     {
-        // var_dump($parent_id);die();
         try {
             $stmt = $this->conn->prepare("INSERT INTO comments (`parent_id`, `politic_id`, `comment`) VALUES (:parent_id, :politic_id, :comment);");
             $stmt->execute(['parent_id' => $parent_id, 'politic_id' => $politic_id, 'comment' => $comment]);
@@ -28,7 +33,6 @@ class Model_Comment extends Model
             LEFT JOIN politics ON comments.politic_id = politics.id
             WHERE
             comments.parent_id = :parent_id");
-
 
             $stmt->execute(['parent_id' => $parent_id]);
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
