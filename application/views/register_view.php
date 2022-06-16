@@ -22,7 +22,7 @@
                 <?php endif; ?>
             </div>
             <div class="btn">
-            <br><input type="submit" class="btn btn-primary btn-sm" value="Registration" />
+                <br><input type="submit" class="btn btn-primary btn-sm" value="Registration" />
             </div>
         </form>
     </div>

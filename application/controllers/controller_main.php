@@ -1,7 +1,9 @@
 <?php
+
 namespace App\controllers;
 
 use App\core\Controller;
+
 class Controller_Main extends Controller
 {
     public function action_index()

@@ -1,10 +1,12 @@
 <?php
+
 namespace App\controllers;
 
 use App\core\Controller;
 use App\core\View;
 use App\models\Model_Country;
 use App\models\Model_Weapon;
+
 class Controller_Dashboard extends Controller
 {
     public function __construct()
@@ -13,7 +15,6 @@ class Controller_Dashboard extends Controller
         $this->weaponModel = new Model_Weapon();
         $this->view = new View();
     }
-
 
     public function action_index()
     {

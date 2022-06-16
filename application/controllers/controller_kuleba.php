@@ -1,8 +1,10 @@
 <?php
+
 namespace App\controllers;
 
 use App\core\Controller;
 use App\core\View;
+
 class Controller_Kuleba extends Controller
 {
     public function __construct()
@@ -18,5 +20,4 @@ class Controller_Kuleba extends Controller
 
         $this->view->generate('kuleba_view.php', 'template_view.php');
     }
-
 }

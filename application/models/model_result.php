@@ -55,5 +55,4 @@ class Model_Result extends Model
 
         return $row['total_amount'];
     }
-
 }

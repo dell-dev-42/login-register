@@ -1,32 +1,35 @@
 <?php
+
 namespace App\core;
-class Controller {
 
-	public $model;
-	public $view;
+class Controller
+{
 
-	function __construct()
-	{
-		$this->view = new View();
-	}
+    public $model;
+    public $view;
 
-	function action_index()
-	{
-	}
+    function __construct()
+    {
+        $this->view = new View();
+    }
 
-	function action_save()
-	{
-	}
+    function action_index()
+    {
+    }
 
-	function action_check()
-	{
-	}
+    function action_save()
+    {
+    }
 
-	function action_select()
-	{
-	}
+    function action_check()
+    {
+    }
 
-	public function action_amount()
-	{
-	}
+    function action_select()
+    {
+    }
+
+    public function action_amount()
+    {
+    }
 }

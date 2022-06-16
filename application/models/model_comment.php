@@ -41,4 +41,3 @@ class Model_Comment extends Model
         }
     }
 }
-

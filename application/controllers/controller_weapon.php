@@ -16,19 +16,6 @@ class Controller_Weapon extends Controller
         $this->view = new View();
     }
 
-    // function action_select()
-    // {
-    //     session_start();
-    //     if (!isset($_SESSION['email'])) {
-    //         header('Location: /login');
-    //     }
-
-    //     $data = [];
-    //     $data['weapon'] = $this->model->getData();
-
-    //     $this->view->generate('dashboard_view.php', 'template_view.php', $data);
-    // }
-
     function action_save()
     {
         $userId = $this->modelUser->getUserByEmail($_SESSION['email'])['id'];

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\controllers;
 
 use App\core\Controller;
@@ -58,8 +59,6 @@ class Controller_Result extends Controller
         $data['results'] = $this->modelResult->getResultToTheTable(
             $userId
         );
-
-        // var_dump($data['results']);
 
         $summ = $this->modelResult->getTotalAmount(
             $userId

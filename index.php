@@ -9,6 +9,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 use Pecee\SimpleRouter\SimpleRouter;
 
 /* Load external routes file */
+
 require_once 'routes.php';
 
 /**

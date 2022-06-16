@@ -1,9 +1,11 @@
 <?php
+
 namespace App\controllers;
 
 use App\core\Controller;
 use App\models\Model_User;
 use App\core\View;
+
 class Controller_User extends Controller
 {
     public function __construct()

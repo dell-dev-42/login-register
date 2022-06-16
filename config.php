@@ -1,6 +1,5 @@
 <?php
 
-//константы подключения
 session_start();
 define('HOST', 'localhost');
 define('USER', 'root');
